@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ChatSimulation = () => {
-  const whatsappLink = "https://wa.me/+1234567890?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/++201272340825?text=Hi%20WhatsApp%20Wizard";
   
   return (
     <section id="how-it-works" className="py-24 relative overflow-hidden">
@@ -27,8 +28,13 @@ const ChatSimulation = () => {
               <div className="relative aspect-square max-w-md mx-auto bg-gradient-to-br from-background to-card/80 p-1.5 rounded-3xl shadow-xl">
                 <div className="bg-card/80 backdrop-blur-md rounded-2xl w-full h-full p-6 overflow-hidden border border-white/10 shadow-inner shadow-white/5">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center shadow-md">
-                      <span className="text-white text-lg font-bold">W</span>
+                    <div className="w-12 h-12 flex items-center justify-center">
+                      <Image 
+                        src="/logo-512.png" 
+                        alt="WhatsApp Wizard Logo" 
+                        width={48} 
+                        height={48}
+                      />
                     </div>
                     <div>
                       <p className="font-bold">WhatsApp Wizard</p>

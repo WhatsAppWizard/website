@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const CTA = () => {
-  const whatsappLink = "https://wa.me/+1234567890?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
   
   return (
     <section className="py-20 bg-gradient-to-br from-black to-emerald-950">

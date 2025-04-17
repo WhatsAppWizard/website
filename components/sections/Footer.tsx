@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const whatsappLink = "https://wa.me/+1234567890?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
   
   return (
     <footer className="bg-black/30 py-12">
@@ -9,8 +10,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl font-bold">W</span>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <Image 
+                  src="/logo-512.png" 
+                  alt="WhatsApp Wizard Logo" 
+                  width={48} 
+                  height={48}
+                />
               </div>
               <h2 className="text-xl font-bold">WhatsApp Wizard</h2>
             </div>

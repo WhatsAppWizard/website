@@ -21,7 +21,7 @@ const Features = () => {
       <div className="container mx-auto px-4 relative z-1">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-16">
-            <div className="inline-block bg-emerald-600/20 backdrop-blur-sm px-4 py-1 rounded-full text-emerald-600 font-medium text-sm mb-4 flex items-center gap-2">
+            <div className="flex bg-emerald-600/20 backdrop-blur-sm px-4 py-1 rounded-full text-emerald-600 font-medium text-sm mb-4 flex items-center gap-2">
               <SparklesIcon size={16} />
               <span>All-in-one Solution</span>
             </div>
@@ -74,7 +74,7 @@ const Features = () => {
                   <YoutubeIcon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">YouTube</h3>
-                <p className="text-muted-foreground mb-6">Download YouTube videos in different quality options directly to your phone.</p>
+                <p className="text-muted-foreground mb-6">Download YouTube videos and shorts directly to your phone.</p>
                 <div className="mt-auto">
                   <span className="text-xs font-medium bg-red-500/10 text-red-500 px-3 py-1 rounded-full">
                     HD Quality
@@ -91,10 +91,10 @@ const Features = () => {
                   <FacebookIcon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Facebook</h3>
-                <p className="text-muted-foreground mb-6">Get photos, videos and reels from Facebook without hassle.</p>
+                <p className="text-muted-foreground mb-6">Get videos and reels from Facebook without hassle.</p>
                 <div className="mt-auto">
                   <span className="text-xs font-medium bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full">
-                    Public & Private
+                    Public 
                   </span>
                 </div>
               </div>
@@ -108,7 +108,7 @@ const Features = () => {
                   <TwitterIcon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Twitter</h3>
-                <p className="text-muted-foreground mb-6">Save tweets, videos, and images from Twitter with a simple link.</p>
+                <p className="text-muted-foreground mb-6">Save videos from Twitter with a simple link.</p>
                 <div className="mt-auto">
                   <span className="text-xs font-medium bg-blue-400/10 text-blue-400 px-3 py-1 rounded-full">
                     Including GIFs
