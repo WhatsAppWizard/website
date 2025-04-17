@@ -1,8 +1,12 @@
+'use client';
+
+import { usePostHog } from "@/lib/hooks/use-posthog";
 import Link from "next/link";
 
 const Hero = () => {
   // WhatsApp direct chat link
   const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const { trackButtonClick } = usePostHog();
   
   return (
     <section className="min-h-screen pt-20 sm:pt-24 md:pt-32 flex items-center relative overflow-hidden">
@@ -27,12 +31,14 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 transition-all text-white px-6 sm:px-8 py-3 sm:py-4 md:py-5 md:px-10 rounded-full text-center font-medium shadow-lg shadow-emerald-700/20 hover:shadow-emerald-700/40 hover:-translate-y-0.5 text-base md:text-lg"
+              onClick={() => trackButtonClick('hero_start_using_now')}
             >
               Start Using Now
             </Link>
             <Link 
               href="#features"
               className="border border-border backdrop-blur-sm bg-background/30 hover:bg-secondary transition-colors px-6 sm:px-8 py-3 sm:py-4 md:py-5 md:px-10 rounded-full text-center font-medium text-base md:text-lg"
+              onClick={() => trackButtonClick('hero_learn_more')}
             >
               Learn More
             </Link>

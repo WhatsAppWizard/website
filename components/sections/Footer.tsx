@@ -1,8 +1,12 @@
+'use client';
+
+import { usePostHog } from "@/lib/hooks/use-posthog";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const { trackButtonClick } = usePostHog();
   
   return (
     <footer className="bg-black/30 py-12">
@@ -29,16 +33,48 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold mb-4">Links</h3>
               <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <li><Link href="#features" className="hover:text-emerald-400 transition-colors">Features</Link></li>
-                <li><Link href="#how-it-works" className="hover:text-emerald-400 transition-colors">How it works</Link></li>
+                <li>
+                  <Link 
+                    href="#features" 
+                    className="hover:text-emerald-400 transition-colors"
+                    onClick={() => trackButtonClick('footer_features_link')}
+                  >
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="#how-it-works" 
+                    className="hover:text-emerald-400 transition-colors"
+                    onClick={() => trackButtonClick('footer_how_it_works_link')}
+                  >
+                    How it works
+                  </Link>
+                </li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <li><Link href="/privacy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
+                <li>
+                  <Link 
+                    href="/privacy" 
+                    className="hover:text-emerald-400 transition-colors"
+                    onClick={() => trackButtonClick('footer_privacy_link')}
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/terms" 
+                    className="hover:text-emerald-400 transition-colors"
+                    onClick={() => trackButtonClick('footer_terms_link')}
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
               </ul>
             </div>
             
@@ -49,6 +85,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="bg-emerald-600 hover:bg-emerald-700 transition-colors text-white px-4 py-2 rounded-full inline-flex items-center gap-2 text-sm"
+                onClick={() => trackButtonClick('footer_chat_now_button')}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                 Chat Now

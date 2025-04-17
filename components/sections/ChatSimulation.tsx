@@ -1,8 +1,12 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePostHog } from "@/lib/hooks/use-posthog";
 
 const ChatSimulation = () => {
-  const whatsappLink = "https://wa.me/++201272340825?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const { trackButtonClick } = usePostHog();
   
   return (
     <section id="how-it-works" className="py-24 relative overflow-hidden">
@@ -102,6 +106,7 @@ const ChatSimulation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-emerald-600 hover:bg-emerald-700 transition-all text-white px-6 py-3 rounded-full text-center font-medium shadow-lg shadow-emerald-700/20 hover:shadow-emerald-700/40 hover:-translate-y-0.5 inline-flex items-center gap-2"
+                  onClick={() => trackButtonClick('chat_simulation_try_it_now')}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                   Try It Now

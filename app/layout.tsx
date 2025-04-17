@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import { PostHogProvider } from './providers/posthog-provider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,9 +51,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
-        </ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            {children}
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );

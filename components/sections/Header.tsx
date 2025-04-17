@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePostHog } from "@/lib/hooks/use-posthog";
 import { useState } from "react";
 
 const Header = () => {
   // WhatsApp direct chat link
-  const whatsappLink = "https://wa.me/++201272340825?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { trackButtonClick } = usePostHog();
   
   return (
     <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4 absolute top-0 left-0 right-0 z-10">
@@ -51,6 +53,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer" 
               className="bg-emerald-600 hover:bg-emerald-700 transition-colors text-white px-5 py-2.5 rounded-full"
+              onClick={() => trackButtonClick('header_start_chat')}
             >
               Start Chat
             </Link>
@@ -70,7 +73,10 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="bg-emerald-600 hover:bg-emerald-700 transition-colors text-white px-4 py-2 rounded-full block text-center mt-2"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  trackButtonClick('mobile_header_start_chat');
+                  setMobileMenuOpen(false);
+                }}
               >
                 Start Chat
               </Link>
