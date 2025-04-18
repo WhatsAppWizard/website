@@ -76,6 +76,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <meta name="apple-mobile-web-app-title" content="WWZ" />
+
+
         <PostHogProvider>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             {children}

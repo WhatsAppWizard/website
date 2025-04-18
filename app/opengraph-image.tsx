@@ -79,43 +79,7 @@ export default async function Image() {
             gap: '24px',
           }}>
             {/* Logo */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-            }}>
-              <div style={{
-                width: '140px',
-                height: '140px',
-                borderRadius: '28px',
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 20px 40px rgba(16, 185, 129, 0.3)',
-                border: '4px solid rgba(255, 255, 255, 0.1)',
-              }}>
-                <img src="/logo-512.png"/>
-              </div>
-              
-              {/* Decorative rings around logo */}
-              <div style={{
-                position: 'absolute',
-                width: '180px',
-                height: '180px',
-                borderRadius: '36px',
-                border: '1px solid rgba(16, 185, 129, 0.3)',
-              }} />
-              <div style={{
-                position: 'absolute',
-                width: '220px',
-                height: '220px',
-                borderRadius: '44px',
-                border: '1px solid rgba(16, 185, 129, 0.15)',
-              }} />
-            </div>
-            
+           
             {/* Brand name */}
             <div style={{
               display: 'flex',
