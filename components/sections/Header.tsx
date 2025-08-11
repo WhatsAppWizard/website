@@ -13,8 +13,8 @@ const Header = () => {
   
   return (
     <>
-     <div className="w-full bg-blue-500 text-white text-center py-2 text-sm mb-8">
-        WhatsApp Banned our Number on June 8th, the Number is back and service is up and running, please resend any unprocessed data
+     <div className="w-full bg-red-500 text-white text-center py-4 text-xl mb-8">
+        WhatsApp Banned our Number on Augest 11th, Bot is down for now. we are working on a fix, please check back later.
       </div>
       <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4 absolute top-0 left-0 right-0 z-10">
          
