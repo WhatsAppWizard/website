@@ -1,8 +1,8 @@
 'use client';
 
+import { usePostHog } from "@/lib/hooks/use-posthog";
 import Image from "next/image";
 import Link from "next/link";
-import { usePostHog } from "@/lib/hooks/use-posthog";
 import { useState } from "react";
 
 const Header = () => {
@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <>
      <div className="w-full bg-red-500 text-white text-center py-4 text-xl mb-8">
-        WhatsApp Banned our Number on Augest 11th, Bot is down for now. we are working on a fix, please check back later.
+        WhatsApp Wizard is now OFFLINE temporarily, Meta doing some changes to WhatsApp APIs that broke the bot. Stay tuned for updates.
       </div>
-      <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4 absolute top-0 left-0 right-0 z-10">
+      <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4">
          
         <div className="flex items-center gap-2">
           <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
