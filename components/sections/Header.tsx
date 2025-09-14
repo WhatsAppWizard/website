@@ -13,8 +13,8 @@ const Header = () => {
   
   return (
     <>
-     <div className="w-full bg-red-500 text-white text-center py-4 text-xl mb-8">
-        WhatsApp Wizard is now OFFLINE temporarily, Meta doing some changes to WhatsApp APIs that broke the bot. Stay tuned for updates.
+     <div className="w-full bg-yellow-500 text-white text-center py-4 text-xl mb-8">
+        WhatsApp Wizard is now Online again, but you can experience some downtime occasionally due to WhatsApp restrictions.
       </div>
       <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4">
          
