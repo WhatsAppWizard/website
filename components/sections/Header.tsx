@@ -7,14 +7,14 @@ import { useState } from "react";
 
 const Header = () => {
   // WhatsApp direct chat link
-  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201223371854?text=Hi%20WhatsApp%20Wizard";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { trackButtonClick } = usePostHog();
   
   return (
     <>
      <div className="w-full bg-yellow-500 text-white text-center py-4 text-xl mb-8">
-        WhatsApp Wizard is now Online again, but you can experience some downtime occasionally due to WhatsApp restrictions.
+        WhatsApp Wizard is Blocked By WhatsApp, We have new number, Please use +201223371854 for WhatsApp Wizard. Also Subscribe to our <a href="https://t.me/gitnasr" target="_blank" rel="noopener noreferrer" className="underline font-bold">Telegram Channel</a> for latest updates.
       </div>
       <header className="container mx-auto flex items-center justify-between py-4 md:py-8 px-4">
          

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   // WhatsApp direct chat link
-  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201223371854?text=Hi%20WhatsApp%20Wizard";
   const { trackButtonClick } = usePostHog();
   
   return (

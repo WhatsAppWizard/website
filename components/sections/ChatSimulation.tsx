@@ -1,11 +1,11 @@
 'use client';
 
+import { usePostHog } from "@/lib/hooks/use-posthog";
 import Image from "next/image";
 import Link from "next/link";
-import { usePostHog } from "@/lib/hooks/use-posthog";
 
 const ChatSimulation = () => {
-  const whatsappLink = "https://wa.me/+201272340825?text=Hi%20WhatsApp%20Wizard";
+  const whatsappLink = "https://wa.me/+201223371854?text=Hi%20WhatsApp%20Wizard";
   const { trackButtonClick } = usePostHog();
   
   return (
