@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Policy Banner */}
           <div className="mb-8 sm:mb-10 md:mb-12 px-4 sm:px-6 py-3 sm:py-4 bg-amber-400 rounded-lg">
             <p className="text-sm sm:text-base md:text-lg text-amber-950 font-medium">
-              Due WhatsApp Policy we discontinued this project, but we're coming with a new one soon, Stay Tuned and Subscribe to{' '}
+              Due WhatsApp Policy we discontinued this project, but we&apos;re coming with a new one soon, Stay Tuned and Subscribe to{' '}
               <Link 
                 href="https://t.me/gitnasr"
                 target="_blank"
