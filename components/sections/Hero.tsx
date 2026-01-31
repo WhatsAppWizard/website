@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const Hero = () => {
   // WhatsApp direct chat link
-  const whatsappLink = "https://wa.me/+201223371854?text=Hi%20WhatsApp%20Wizard";
   const { trackButtonClick } = usePostHog();
   
   return (
@@ -19,6 +18,21 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32 relative z-1">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Policy Banner */}
+          <div className="mb-8 sm:mb-10 md:mb-12 px-4 sm:px-6 py-3 sm:py-4 bg-amber-400 rounded-lg">
+            <p className="text-sm sm:text-base md:text-lg text-amber-950 font-medium">
+              Due WhatsApp Policy we discontinued this project, but we're coming with a new one soon, Stay Tuned and Subscribe to{' '}
+              <Link 
+                href="https://t.me/gitnasr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-amber-900 font-semibold"
+              >
+                Telegram
+              </Link>
+              {' '}For Updates
+            </p>
+          </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-400 leading-tight">
             Never Leave Your WhatsApp Again
           </h2>
@@ -27,13 +41,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href={whatsappLink}
+              href="https://github.com/gitnasr/WhatsAppWizard"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 transition-all text-white px-6 sm:px-8 py-3 sm:py-4 md:py-5 md:px-10 rounded-full text-center font-medium shadow-lg shadow-emerald-700/20 hover:shadow-emerald-700/40 hover:-translate-y-0.5 text-base md:text-lg"
-              onClick={() => trackButtonClick('hero_start_using_now')}
+              onClick={() => trackButtonClick('hero_open_source_project')}
             >
-              Start Using Now
+              We Opened Source the bot Project
             </Link>
             <Link 
               href="#features"
